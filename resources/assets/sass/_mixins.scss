@@ -1,0 +1,8 @@
+/* Animate */
+@mixin effect($object,$time,$effect) {
+  @if $effect == "" { $effect : linear }
+  -webkit-transition: $object $time $effect;
+  -moz-transition: $object $time $effect;
+  -o-transition: $object $time $effect;
+  transition: $object $time $effect;
+}

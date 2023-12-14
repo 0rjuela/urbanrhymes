@@ -1,0 +1,182 @@
+.menu-wrapper {
+	background-color: #2b2a2a;
+	position: absolute;
+	bottom: 57px;
+	// bottom: 83px;
+	width: 100%;
+	z-index: 99;
+
+	.menu {
+		height: 0px;
+		// transition: all .5s ease-in-out;
+		display: none;
+
+		.row {
+			margin-left: 0 !important;
+			margin-right: 0 !important;
+		}
+	}
+
+	#menu-btn {
+		padding: 10px 15px 0px 15px;
+		background-color: $yellow;
+		border-radius: 200px 200px 0 0;
+		height: 35px;
+		position: absolute;
+		top: -35px;
+		left: calc(50% - 20px);
+		color: #000000;
+		font-weight: 600;
+		font-size: 14px;
+		text-decoration: none;
+
+		&:hover {
+			color: darken(#ffffff, 80%);
+		}
+	}
+
+	.col-xs-3,
+	.col-md-3 {
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	.menu-item-wrapper {
+		height: 220px;
+		position: relative;
+		margin-top: 0px;
+		border: 1px solid #000000;
+
+		&.scene-1-wrapper,
+		&.scene-2-wrapper,
+		&.scene-3-wrapper,
+		&.scene-4-wrapper {
+			background-size: cover;
+			background-position: center;
+			background-repeat: no-repeat;
+		}
+
+		&.scene-1-wrapper {
+			background-image: url('/img/menu-scene-1.png');
+		}
+
+		&.scene-2-wrapper {
+			background-image: url('/img/menu-scene-2.png');
+		}
+
+		&.scene-3-wrapper {
+			background-image: url('/img/menu-scene-3.png');
+		}
+
+		&.scene-4-wrapper {
+			background-image: url('/img/menu-scene-4.png');
+		}
+
+		.info {
+			position: absolute;
+			bottom: 20px;
+			right: 20px;
+			text-transform: uppercase;
+			padding: 5px 10px;
+			font-size: 22px;
+			z-index: 1;
+			font-weight: 600;
+			width: 170px;
+			text-align: right;
+			width: auto;
+			a {
+				text-decoration: none;
+				padding: 8px 0 8px 40px;
+			}
+		}
+
+		.time {
+			position: absolute;
+			bottom: 65px;
+			right: 20px;
+			font-size: 16px;
+			font-weight: 600;
+			color: #ffffff;
+			z-index: 1;
+		}
+
+		.scene {
+			position: absolute;
+			bottom: 85px;
+			right: 20px;
+			font-size: 12px;
+			text-transform: uppercase;
+			color: darken(#ffffff, 30%);
+			z-index: 1;
+		}
+
+		.cover {
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			z-index: 0;
+			cursor: pointer;
+			@include effect(all,0.5s,ease);
+		}
+
+		.badget {
+			position: absolute;
+			right: 10px;
+			top: 10px;
+		}
+
+		&.blocked {
+			.cover	{
+				// background: rgba(255,0,0,0.30);
+				background: rgba(0,0,0,0.60);
+				&:hover {
+					background: rgba(255,0,0,0.30);
+				}
+			}
+			.info {
+				background: rgba(0,0,0,0.60);
+				color: #BF1D2D;
+			}
+		}
+
+		&.continue {
+			.cover {
+				background: rgba(0,0,0,0.60);
+				&:hover {
+					background: rgba(255,255,255,0.30);
+				}
+			}
+			.info {
+				background: rgba(255,255,255,0.30);
+				a {
+					color: #8BC53E;
+				}
+			}
+		}
+		&.repeat {
+			.cover {
+				background: rgba(0,0,0,0.60);
+				&:hover {
+					background: rgba(255,217,0,0.30);
+				}
+			}
+			.info {
+				background: rgba(255,255,255,0.30);
+				a {
+					color: $yellow;
+				}
+			}
+		}
+
+	}
+
+	h2,
+	h3,
+	h4 {
+		padding: 0;
+		margin: 0;
+	}
+
+}
